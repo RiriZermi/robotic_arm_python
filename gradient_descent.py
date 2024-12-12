@@ -9,7 +9,7 @@ def f(x, robot):
         if configuration[i] == 'r':
             DH_link[0] = x[i] 
         else:
-            DH_link[1] = x[i]
+            DH_link[3] = x[i]
     T = np.eye(4) # I 
     for parameters in DH_parameters:  
         T = T @ robot.DH_matrix(*parameters)

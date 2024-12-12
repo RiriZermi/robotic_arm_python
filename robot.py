@@ -183,7 +183,7 @@ class ArmVisualizer():
                 else:
                     DH_link[0] = param[i]    
             else:
-                DH_link[1] = param[i]
+                DH_link[3] = param[i]
         
         points,x_axes, y_axes, z_axes = self.robot.calculate_origin_all_frame(self.robot.DH_parameters)  
         self.add_quiver(points, x_axes, y_axes, z_axes)
