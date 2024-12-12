@@ -24,8 +24,8 @@ This document outlines a custom Denavit-Hartenberg (DH) convention where the \(x
 ---
 
 #### **1. Axis Definitions:**
-- **\(z_i\) Axis:** Defined as the axis of rotation or translation for joint \(i\).
-- **\(x_i\) Axis:** Points toward the next link \(i+1\), connecting the \(z_i\) axis of joint \(i\) to the \(z_{i+1}\) axis of joint \(i+1\).
+- **\(z_i\) Axis:** Defined as the axis of rotation for joint \(i\).
+- **\(x_i\) Axis:** Points toward the next link \(i+1\), connecting the \(z_i\) axis of joint \(i\) to the \(z_{i+1}\) axis of joint \(i+1\). Defined also the axis of translation in case of prismatic joint \(i\).
 - **\(y_i\) Axis:** Defined by the right-hand rule to form an orthonormal coordinate system.
 
 ---

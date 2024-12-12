@@ -37,11 +37,11 @@ def jacobian(function, point, robot, epsilon=1e-6):
     return J
    
 
-def gradient_descent(f, nbrParam, target=0, robot=None, tol=1e-2,max_iter=1000,alpha=0.1):
+def gradient_descent(f, nbrParam, target=0, robot=None , tol=1e-2,max_iter=1000,alpha=0.1):
     
     conf_mask = np.array([char=='p' for char in robot.configuration])
     if robot.last_solution is None:
-        xi = 5*(np.random.rand(nbrParam) - 0.5)
+        xi = robot.prismaticLenght*(np.random.rand(nbrParam) - 0.5)
     else:
         xi = robot.last_solution #search a solution near our actual solution
 
