@@ -102,7 +102,7 @@ class ArmVisualizer():
             slider_ax = plt.axes([0.2, 0.01 + i* 0.03, 0.65, 0.02], facecolor=axcolor)
             if (conf == 'r'):
                 theta = self.robot.DH_parameters[i][0]
-                slider = Slider(slider_ax, f'Theta{i}', -180, 180, valinit=theta)
+                slider = Slider(slider_ax, f'Theta{i}', -180, 180, valinit=theta*180/np.pi)
             else:
                 a = self.robot.DH_parameters[i][3]
                 lenght = self.robot.prismaticLenght
